@@ -2,14 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Arrow Fire Trading Design System - Industrial & Professional
+All colors MUST be HSL. Red/Orange fire safety theme with Arabic RTL support.
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
+    /* Brand Colors - Fire Safety Theme */
+    --fire-red: 0 84% 50%;
+    --fire-orange: 20 100% 55%;
+    --safety-gray: 210 8% 45%;
+    --industrial-dark: 210 20% 15%;
+    --steel-gray: 210 10% 85%;
+    
+    /* Core System Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 20% 15%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -17,24 +27,35 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Semantic Brand Colors */
+    --primary: var(--fire-red);
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: var(--steel-gray);
+    --secondary-foreground: var(--industrial-dark);
+    
+    --accent: var(--fire-orange);
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 210 15% 95%;
+    --muted-foreground: var(--safety-gray);
+    
+    --destructive: var(--fire-red);
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 210 15% 90%;
+    --input: 210 15% 95%;
+    --ring: var(--fire-red);
+    
+    /* Gradients */
+    --gradient-fire: linear-gradient(135deg, hsl(var(--fire-red)), hsl(var(--fire-orange)));
+    --gradient-steel: linear-gradient(135deg, hsl(var(--safety-gray)), hsl(var(--steel-gray)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--industrial-dark)), hsl(var(--safety-gray)));
+    
+    /* Shadows */
+    --shadow-fire: 0 10px 30px -10px hsl(var(--fire-red) / 0.3);
+    --shadow-steel: 0 4px 20px -4px hsl(var(--safety-gray) / 0.2);
+    --shadow-hero: 0 20px 40px -10px hsl(var(--industrial-dark) / 0.4);
 
     --radius: 0.5rem;
 
@@ -100,6 +121,89 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  /* RTL Support */
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  .ltr {
+    direction: ltr;
+    text-align: left;
+  }
+}
+
+@layer components {
+  /* Fire Safety Button Variants */
+  .btn-fire {
+    @apply bg-gradient-to-r from-[hsl(var(--fire-red))] to-[hsl(var(--fire-orange))] text-white font-semibold px-8 py-4 rounded-lg shadow-[var(--shadow-fire)] hover:shadow-lg transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-steel {
+    @apply bg-gradient-to-r from-[hsl(var(--safety-gray))] to-[hsl(var(--steel-gray))] text-white font-semibold px-6 py-3 rounded-lg shadow-[var(--shadow-steel)] hover:shadow-lg transition-all duration-300;
+  }
+  
+  /* Hero Section */
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-[hsl(var(--industrial-dark))] via-[hsl(var(--industrial-dark)/0.8)] to-transparent;
+  }
+  
+  /* Animation Classes */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+  
+  /* Gallery Hover Effects */
+  .gallery-item {
+    @apply relative overflow-hidden rounded-lg shadow-[var(--shadow-steel)] hover:shadow-[var(--shadow-fire)] transform hover:scale-105 transition-all duration-300;
+  }
+  
+  /* Language Toggle */
+  .lang-toggle {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-white font-medium hover:bg-white/20 transition-all duration-300;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
