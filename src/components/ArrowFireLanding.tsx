@@ -357,19 +357,6 @@ export default function ArrowFireLanding() {
             {/* Kitchen Safety */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-fire-red to-fire-orange rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.1s'}}>
-                <div className="relative mb-6">
-                  <img 
-                    src={promoImages[0].src} 
-                    alt={t(promoImages[0].key)}
-                    className="w-full h-48 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
-                      {language === 'en' ? 'Kitchen' : 'المطبخ'}
-                    </span>
-                  </div>
-                </div>
                 <h3 className="text-2xl font-professional-en font-bold mb-4">
                   {language === 'en' ? 'Kitchen Fire Safety' : 'السلامة من حريق المطبخ'}
                 </h3>
@@ -396,19 +383,6 @@ export default function ArrowFireLanding() {
             {/* Outdoor Safety */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-industrial-dark to-safety-gray rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.2s'}}>
-                <div className="relative mb-6">
-                  <img 
-                    src={promoImages[1].src} 
-                    alt={t(promoImages[1].key)}
-                    className="w-full h-48 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
-                      {language === 'en' ? 'Outdoor' : 'الخارج'}
-                    </span>
-                  </div>
-                </div>
                 <h3 className="text-2xl font-professional-en font-bold mb-4">
                   {language === 'en' ? 'Outdoor Fire Protection' : 'حماية الحريق الخارجية'}
                 </h3>
@@ -435,19 +409,6 @@ export default function ArrowFireLanding() {
             {/* Garage Safety */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-fire-orange to-fire-red rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.3s'}}>
-                <div className="relative mb-6">
-                  <img 
-                    src={promoImages[2].src} 
-                    alt={t(promoImages[2].key)}
-                    className="w-full h-48 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
-                      {language === 'en' ? 'Garage' : 'الجراج'}
-                    </span>
-                  </div>
-                </div>
                 <h3 className="text-2xl font-professional-en font-bold mb-4">
                   {language === 'en' ? 'Garage Fire Safety' : 'السلامة من حريق الجراج'}
                 </h3>
