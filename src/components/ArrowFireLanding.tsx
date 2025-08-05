@@ -714,14 +714,14 @@ export default function ArrowFireLanding() {
             <div className="text-center hover-lift scale-in" style={{animationDelay: '0.1s'}}>
               <Phone className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
               <h3 className="font-semibold mb-2">{t('phone')}</h3>
-              <p>0570707763</p>
-              <p>0570707761</p>
+              <a href="tel:0570707763" className="block hover:text-fire-orange transition-colors">0570707763</a>
+              <a href="tel:0570707761" className="block hover:text-fire-orange transition-colors">0570707761</a>
             </div>
             
             <div className="text-center hover-lift scale-in" style={{animationDelay: '0.2s'}}>
               <Mail className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
               <h3 className="font-semibold mb-2">{t('email')}</h3>
-              <p>info@arrowf.sa</p>
+              <a href="mailto:info@arrowf.sa" className="hover:text-fire-orange transition-colors">info@arrowf.sa</a>
             </div>
             
             <div className="text-center hover-lift scale-in" style={{animationDelay: '0.3s'}}>
