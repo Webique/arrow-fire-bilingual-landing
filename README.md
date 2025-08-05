@@ -1,73 +1,100 @@
-# Welcome to your Lovable project
+# Arrow Fire Trading - Professional Fire Safety Solutions
 
-## Project info
+## About
 
-**URL**: https://lovable.dev/projects/139cb08f-abc9-4d4e-8dd3-fe96d6a7e304
+Arrow Fire Trading is a leading fire safety solutions provider in Saudi Arabia, specializing in professional fire detection, suppression, and emergency response systems for commercial, industrial, and residential properties.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Bilingual Support**: Full Arabic and English language support
+- **Professional Design**: Modern, responsive design with beautiful animations
+- **Comprehensive Services**: Fire detection, suppression, emergency response
+- **Contact Integration**: Direct WhatsApp integration for instant communication
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/139cb08f-abc9-4d4e-8dd3-fe96d6a7e304) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite**: Fast build tool and development server
+- **TypeScript**: Type-safe JavaScript development
+- **React**: Modern UI library
+- **shadcn-ui**: Beautiful, accessible UI components
+- **Tailwind CSS**: Utility-first CSS framework
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/139cb08f-abc9-4d4e-8dd3-fe96d6a7e304) and click on Share -> Publish.
+### Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-Yes, you can!
+### Installation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+# Step 1: Clone the repository
+git clone <YOUR_REPOSITORY_URL>
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Step 2: Navigate to the project directory
+cd arrow-fire-trading
+
+# Step 3: Install dependencies
+npm install
+
+# Step 4: Start the development server
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Building for Production
+
+```sh
+# Build the project for production
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ArrowFireLanding.tsx  # Main landing page component
+│   ├── LanguageContext.tsx    # Language switching functionality
+│   └── ui/                   # shadcn-ui components
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── index.css           # Global styles and animations
+```
+
+## Customization
+
+### Adding New Content
+
+1. **Translations**: Add new text keys in `src/components/LanguageContext.tsx`
+2. **Styling**: Modify `src/index.css` for global styles
+3. **Components**: Create new components in `src/components/`
+
+### Deployment
+
+The project can be deployed to any static hosting service:
+
+- **Vercel**: Connect your GitHub repository
+- **Netlify**: Drag and drop the `dist` folder
+- **GitHub Pages**: Enable GitHub Pages in repository settings
+
+## Contact
+
+For more information about Arrow Fire Trading services, contact us:
+
+- **Phone**: 0570707763, 0570707761
+- **Email**: info@arrowf.sa
+- **WhatsApp**: +966561720820
+- **Location**: Dammam, Saudi Arabia
+
+## License
+
+This project is proprietary software developed for Arrow Fire Trading.
