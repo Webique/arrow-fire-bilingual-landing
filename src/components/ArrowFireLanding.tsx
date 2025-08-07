@@ -36,10 +36,10 @@ export default function ArrowFireLanding() {
   ];
 
   const galleryImages = [
-    '/lovable-uploads/cd22de66-d791-4acf-9953-d0df8bb32d3e.png',
-    '/lovable-uploads/05ff961a-35cb-4454-a78f-5588a7178dbc.png',
-    '/lovable-uploads/fef6f4b2-acb8-44f7-ab48-084a69d31c38.png',
-    '/lovable-uploads/44f5c3d2-6a74-4b3e-a6ce-88b7389daef8.png',
+    '/lovable-uploads/2.png',
+    '/lovable-uploads/1.png',
+    '/lovable-uploads/3.png',
+    '/lovable-uploads/4.png',
     '/lovable-uploads/65cc05b3-8b80-41f0-ab03-34fc8d7b5745.png',
     '/lovable-uploads/73cd4502-eabe-4c3a-a85e-1588b651b36d.png',
     '/lovable-uploads/2d6b3094-9c32-4f56-8097-2996410527f4.png',
