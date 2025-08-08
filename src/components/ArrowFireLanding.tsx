@@ -120,7 +120,7 @@ export default function ArrowFireLanding() {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-professional-en font-bold text-white mb-6 fade-in-up">
+            <h1 className={`text-4xl md:text-6xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-white mb-6 fade-in-up`}>
               {t('heroTitle')}
             </h1>
             <p className="text-xl md:text-2xl font-professional-ar text-white/90 mb-8 fade-in-up" style={{animationDelay: '0.2s'}}>
@@ -143,7 +143,7 @@ export default function ArrowFireLanding() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="slide-in-left">
-              <h2 className="text-3xl md:text-4xl font-professional-en font-bold text-industrial-dark mb-6">
+              <h2 className={`text-3xl md:text-4xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-industrial-dark mb-6`}>
                 {t('aboutTitle')}
               </h2>
               <p className="text-lg text-safety-gray leading-relaxed">
@@ -172,7 +172,7 @@ export default function ArrowFireLanding() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-professional-en font-bold text-industrial-dark mb-6">
+            <h2 className={`text-5xl md:text-6xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-industrial-dark mb-6`}>
               {t('servicesTitle')}
             </h2>
             <p className="text-xl font-professional-ar text-safety-gray max-w-3xl mx-auto">
@@ -192,7 +192,7 @@ export default function ArrowFireLanding() {
                     <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">01</span>
                   </div>
                 </div>
-                <h3 className="text-2xl font-professional-en font-bold mb-4">
+                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
                   {language === 'en' ? 'Detection & Monitoring' : 'الكشف والمراقبة'}
                 </h3>
                 <p className="text-white/90 font-professional-ar mb-6">
@@ -226,7 +226,7 @@ export default function ArrowFireLanding() {
                     <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">02</span>
                   </div>
                 </div>
-                <h3 className="text-2xl font-professional-en font-bold mb-4">
+                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
                   {language === 'en' ? 'Suppression & Control' : 'القمع والتحكم'}
                 </h3>
                 <p className="text-white/90 font-professional-ar mb-6">
@@ -260,7 +260,7 @@ export default function ArrowFireLanding() {
                     <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">03</span>
                   </div>
                 </div>
-                <h3 className="text-2xl font-professional-en font-bold mb-4">
+                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
                   {language === 'en' ? 'Emergency & Safety' : 'الطوارئ والسلامة'}
                 </h3>
                 <p className="text-white/90 font-professional-ar mb-6">
@@ -291,7 +291,7 @@ export default function ArrowFireLanding() {
                 <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="font-professional-en font-semibold text-industrial-dark mb-2">
+                <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
                   {t(service.key)}
                 </h4>
                 <p className="text-sm text-safety-gray font-professional-ar">
@@ -317,7 +317,7 @@ export default function ArrowFireLanding() {
       {/* Certificates Section */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-professional-en font-bold text-center text-industrial-dark mb-12">
+          <h2 className={`text-3xl md:text-4xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-center text-industrial-dark mb-12`}>
             {t('certificatesTitle')}
           </h2>
           
@@ -345,7 +345,7 @@ export default function ArrowFireLanding() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-professional-en font-bold text-industrial-dark mb-6">
+            <h2 className={`text-5xl md:text-6xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-industrial-dark mb-6`}>
               {t('promoTitle')}
             </h2>
             <p className="text-xl font-professional-ar text-safety-gray max-w-4xl mx-auto">
@@ -357,7 +357,7 @@ export default function ArrowFireLanding() {
             {/* Kitchen Safety */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-fire-red to-fire-orange rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.1s'}}>
-                <h3 className="text-2xl font-professional-en font-bold mb-4">
+                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
                   {language === 'en' ? 'Kitchen Fire Safety' : 'السلامة من حريق المطبخ'}
                 </h3>
                 <p className="text-white/90 font-professional-ar mb-6">
@@ -383,7 +383,7 @@ export default function ArrowFireLanding() {
             {/* Outdoor Safety */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-industrial-dark to-safety-gray rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.2s'}}>
-                <h3 className="text-2xl font-professional-en font-bold mb-4">
+                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
                   {language === 'en' ? 'Outdoor Fire Protection' : 'حماية الحريق الخارجية'}
                 </h3>
                 <p className="text-white/90 font-professional-ar mb-6">
@@ -409,7 +409,7 @@ export default function ArrowFireLanding() {
             {/* Garage Safety */}
             <div className="group relative">
               <div className="bg-gradient-to-br from-fire-orange to-fire-red rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.3s'}}>
-                <h3 className="text-2xl font-professional-en font-bold mb-4">
+                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
                   {language === 'en' ? 'Garage Fire Safety' : 'السلامة من حريق الجراج'}
                 </h3>
                 <p className="text-white/90 font-professional-ar mb-6">
@@ -439,7 +439,7 @@ export default function ArrowFireLanding() {
               <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <h4 className="font-professional-en font-semibold text-industrial-dark mb-2">
+              <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
                 {language === 'en' ? 'Install Smoke Alarms' : 'تركيب أجهزة إنذار الدخان'}
               </h4>
               <p className="text-sm text-safety-gray font-professional-ar">
@@ -451,7 +451,7 @@ export default function ArrowFireLanding() {
               <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4">
                 <Flame className="w-6 h-6 text-white" />
               </div>
-              <h4 className="font-professional-en font-semibold text-industrial-dark mb-2">
+              <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
                 {language === 'en' ? 'Keep Fire Extinguishers' : 'احتفظ بطوافئ الحريق'}
               </h4>
               <p className="text-sm text-safety-gray font-professional-ar">
@@ -463,7 +463,7 @@ export default function ArrowFireLanding() {
               <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h4 className="font-professional-en font-semibold text-industrial-dark mb-2">
+              <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
                 {language === 'en' ? 'Create Escape Plan' : 'إنشاء خطة الهروب'}
               </h4>
               <p className="text-sm text-safety-gray font-professional-ar">
@@ -475,7 +475,7 @@ export default function ArrowFireLanding() {
               <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4">
                 <Award className="w-6 h-6 text-white" />
               </div>
-              <h4 className="font-professional-en font-semibold text-industrial-dark mb-2">
+              <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
                 {language === 'en' ? 'Regular Maintenance' : 'الصيانة الدورية'}
               </h4>
               <p className="text-sm text-safety-gray font-professional-ar">
@@ -501,7 +501,7 @@ export default function ArrowFireLanding() {
       <section id="gallery" className="py-20 bg-gradient-to-br from-industrial-dark via-safety-gray to-steel-gray">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-professional-en font-bold text-white mb-6">
+            <h2 className={`text-4xl md:text-5xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-white mb-6`}>
               {t('galleryTitle')}
             </h2>
             <p className="text-xl font-professional-ar text-white/80 max-w-3xl mx-auto">
@@ -522,7 +522,7 @@ export default function ArrowFireLanding() {
                   {language === 'en' ? 'Commercial' : 'تجاري'}
                 </div>
               </div>
-              <h3 className="text-2xl font-professional-en font-bold text-white mb-4">
+              <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-white mb-4`}>
                 {language === 'en' ? 'Commercial Fire Safety System' : 'نظام السلامة من الحريق التجاري'}
               </h3>
               <p className="text-white/80 font-professional-ar mb-6">
@@ -552,7 +552,7 @@ export default function ArrowFireLanding() {
                   {language === 'en' ? 'Industrial' : 'صناعي'}
                 </div>
               </div>
-              <h3 className="text-2xl font-professional-en font-bold text-white mb-4">
+              <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-white mb-4`}>
                 {language === 'en' ? 'Industrial Safety Solutions' : 'حلول السلامة الصناعية'}
               </h3>
               <p className="text-white/80 font-professional-ar mb-6">
@@ -582,7 +582,7 @@ export default function ArrowFireLanding() {
                   {language === 'en' ? 'Residential' : 'سكني'}
                 </div>
               </div>
-              <h3 className="text-2xl font-professional-en font-bold text-white mb-4">
+              <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-white mb-4`}>
                 {language === 'en' ? 'Residential Fire Protection' : 'حماية الحريق السكنية'}
               </h3>
               <p className="text-white/80 font-professional-ar mb-6">
@@ -612,7 +612,7 @@ export default function ArrowFireLanding() {
                   {language === 'en' ? 'Emergency' : 'طوارئ'}
                 </div>
               </div>
-              <h3 className="text-2xl font-professional-en font-bold text-white mb-4">
+              <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-white mb-4`}>
                 {language === 'en' ? 'Emergency Response Systems' : 'أنظمة الاستجابة للطوارئ'}
               </h3>
               <p className="text-white/80 font-professional-ar mb-6">
@@ -647,7 +647,7 @@ export default function ArrowFireLanding() {
       {/* Partners Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-professional-en font-bold text-center text-industrial-dark mb-12">
+          <h2 className={`text-3xl md:text-4xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-center text-industrial-dark mb-12`}>
             {t('partnersTitle')}
           </h2>
           
@@ -667,7 +667,7 @@ export default function ArrowFireLanding() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-industrial-dark text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-professional-en font-bold text-center mb-12">
+          <h2 className={`text-3xl md:text-4xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-center mb-12`}>
             {t('contactTitle')}
           </h2>
           
@@ -714,7 +714,7 @@ export default function ArrowFireLanding() {
                 className="w-16 h-16 object-contain"
               />
               <div>
-                <h3 className="font-professional-en font-bold text-lg">Arrow Fire Trading</h3>
+                <h3 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-lg`}>Arrow Fire Trading</h3>
                 <p className="font-professional-ar text-sm text-gray-400">سهم الإطفاء التجارية</p>
               </div>
             </div>

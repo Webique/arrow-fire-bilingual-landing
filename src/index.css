@@ -6,10 +6,6 @@
 All colors MUST be HSL. Red/Orange fire safety theme with Arabic RTL support.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
-
 @layer base {
   :root {
     /* Brand Colors - Fire Safety Theme */
@@ -130,11 +126,13 @@ All colors MUST be HSL. Red/Orange fire safety theme with Arabic RTL support.
   .rtl {
     direction: rtl;
     text-align: right;
+    font-family: 'Amiri', serif;
   }
   
   .ltr {
     direction: ltr;
     text-align: left;
+    font-family: 'Inter', sans-serif;
   }
   
   /* Professional Font Classes */
