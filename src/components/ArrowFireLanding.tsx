@@ -72,8 +72,6 @@ export default function ArrowFireLanding() {
             <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
               <a href="#home" className="text-white hover:text-fire-orange transition-colors font-medium">{t('home')}</a>
               <a href="#about" className="text-white hover:text-fire-orange transition-colors font-medium">{t('about')}</a>
-              <a href="#services" className="text-white hover:text-fire-orange transition-colors font-medium">{t('services')}</a>
-              <a href="#gallery" className="text-white hover:text-fire-orange transition-colors font-medium">{t('gallery')}</a>
               <a href="#contact" className="text-white hover:text-fire-orange transition-colors font-medium">{t('contact')}</a>
             </nav>
 
@@ -101,8 +99,6 @@ export default function ArrowFireLanding() {
               <div className="flex flex-col gap-4">
                 <a href="#home" className="text-white hover:text-fire-orange transition-colors font-medium">{t('home')}</a>
                 <a href="#about" className="text-white hover:text-fire-orange transition-colors font-medium">{t('about')}</a>
-                <a href="#services" className="text-white hover:text-fire-orange transition-colors font-medium">{t('services')}</a>
-                <a href="#gallery" className="text-white hover:text-fire-orange transition-colors font-medium">{t('gallery')}</a>
                 <a href="#contact" className="text-white hover:text-fire-orange transition-colors font-medium">{t('contact')}</a>
               </div>
             </nav>
@@ -123,9 +119,7 @@ export default function ArrowFireLanding() {
             <h1 className={`text-4xl md:text-6xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-white mb-6 fade-in-up`}>
               {t('heroTitle')}
             </h1>
-            <p className="text-xl md:text-2xl font-professional-ar text-white/90 mb-8 fade-in-up" style={{animationDelay: '0.2s'}}>
-              {t('heroSubtext')}
-            </p>
+
             <Button 
               className="btn-fire text-lg hover:scale-110 transform transition-all duration-500 hover:shadow-2xl" 
               style={{animationDelay: '0.4s'}}
@@ -141,21 +135,32 @@ export default function ArrowFireLanding() {
       {/* About Section */}
       <section id="about" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="slide-in-left">
-              <h2 className={`text-3xl md:text-4xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-industrial-dark mb-6`}>
-                {t('aboutTitle')}
-              </h2>
-              <p className="text-lg text-safety-gray leading-relaxed">
-                {t('aboutText')}
-              </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <h2 className={`text-4xl md:text-5xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-industrial-dark mb-6`}>
+                  {t('aboutTitle')}
+                </h2>
+                <p className="text-lg text-safety-gray leading-relaxed">
+                  {t('aboutText')}
+                </p>
+              </div>
+              
+
             </div>
-            <div className="slide-in-right">
+            
+            <div className="relative">
               <img 
-                src={galleryImages[6]} 
-                alt="Arrow Fire Team"
-                className="rounded-lg shadow-lg w-full"
+                src="/lovable-uploads/arrowfire.jpg" 
+                alt="Arrow Fire Industrial Infrastructure"
+                className="w-full h-96 object-cover rounded-2xl shadow-xl"
               />
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-fire-red rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-industrial-dark">24/7 Support</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -164,7 +169,7 @@ export default function ArrowFireLanding() {
       {/* Services Section */}
       <section id="services" className="py-20 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-fire-red/10 via-fire-orange/5 to-safety-gray/10">
+        <div className="absolute inset-0 bg-gradient-to-br from-safety-gray/10 via-steel-gray/10 to-fire-orange/5">
           <div className="absolute top-0 left-0 w-72 h-72 bg-fire-red/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-1/4 right-0 w-96 h-96 bg-fire-orange/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
           <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-safety-gray/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -180,322 +185,145 @@ export default function ArrowFireLanding() {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Service Category 1: Detection & Monitoring */}
-            <div className="group">
-              <div className="bg-gradient-to-br from-fire-red to-fire-orange p-8 rounded-3xl text-white hover-lift scale-in" style={{animationDelay: '0.1s'}}>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                    <Shield className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-500" />
-                  </div>
-                  <div className="text-right">
-                    <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">01</span>
+          {/* Main Services Grid - Varied Sizes */}
+          <div className="grid gap-8 mb-12">
+            {/* Row 1 - Large Cards with Subpoints */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {[1, 2].map((serviceNum) => (
+                <div key={serviceNum} className="group">
+                  <div className="bg-gradient-to-br from-industrial-dark to-safety-gray p-8 rounded-3xl text-white hover-lift scale-in shadow-xl hover:shadow-2xl transition-all duration-500 h-72" style={{animationDelay: `${(serviceNum - 1) * 0.1}s`}}>
+                    <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm mb-6">
+                      <Shield className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h3 className={`text-xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4 leading-tight`}>
+                      {t(`service${serviceNum}`)}
+                    </h3>
+                    <div className="space-y-2 pb-8">
+                      {serviceNum === 1 && (
+                        <>
+                          <p className="text-sm text-white/80">• تركيب أنظمة كشف الحريق</p>
+                          <p className="text-sm text-white/80">• أنظمة إطفاء تلقائية</p>
+                          <p className="text-sm text-white/80">• أنظمة إنذار صوتي</p>
+                        </>
+                      )}
+                      {serviceNum === 2 && (
+                        <>
+                          <p className="text-sm text-white/80">• فحص دوري للأجهزة</p>
+                          <p className="text-sm text-white/80">• اختبار الأنظمة</p>
+                          <p className="text-sm text-white/80">• تحديث البرامج</p>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
-                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
-                  {language === 'en' ? 'Detection & Monitoring' : 'الكشف والمراقبة'}
-                </h3>
-                <p className="text-white/90 font-professional-ar mb-6">
-                  {language === 'en' ? 'Advanced fire detection systems with real-time monitoring and smart alerts for immediate response.' : 'أنظمة كشف الحريق المتقدمة مع المراقبة في الوقت الفعلي والتنبيهات الذكية للاستجابة الفورية.'}
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Smart Smoke Detection' : 'كشف الدخان الذكي'}</span>
+              ))}
+            </div>
+            
+            {/* Row 2 - Medium Cards with Subpoints */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {[3, 4, 5].map((serviceNum) => (
+                <div key={serviceNum} className="group">
+                  <div className="bg-gradient-to-br from-fire-red to-fire-orange p-6 rounded-2xl text-white hover-lift scale-in shadow-lg hover:shadow-xl transition-all duration-500 h-48" style={{animationDelay: `${(serviceNum - 1) * 0.1}s`}}>
+                    <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm mb-4">
+                      <Settings className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <h3 className={`text-lg ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold leading-tight mb-3`}>
+                      {t(`service${serviceNum}`)}
+                    </h3>
+                    <div className="space-y-1 pb-3">
+                      {serviceNum === 3 && (
+                        <>
+                          <p className="text-xs text-white/80">• تصميم المخططات</p>
+                          <p className="text-xs text-white/80">• الموافقات الهندسية</p>
+                        </>
+                      )}
+                      {serviceNum === 4 && (
+                        <>
+                          <p className="text-xs text-white/80">• خطط الإخلاء</p>
+                          <p className="text-xs text-white/80">• بروتوكولات السلامة</p>
+                        </>
+                      )}
+                      {serviceNum === 5 && (
+                        <>
+                          <p className="text-xs text-white/80">• تقارير فنية</p>
+                          <p className="text-xs text-white/80">• متطلبات التخزين</p>
+                        </>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Heat Sensing Technology' : 'تقنية استشعار الحرارة'}</span>
+                </div>
+              ))}
+            </div>
+            
+            {/* Row 3 - Two Small Cards Side by Side */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="group">
+                <div className="bg-gradient-to-br from-safety-gray to-steel-gray p-6 rounded-2xl text-white hover-lift scale-in shadow-lg hover:shadow-xl transition-all duration-500 h-44" style={{animationDelay: '0.5s'}}>
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm mb-4">
+                    <Award className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? '24/7 Monitoring' : 'مراقبة 24/7'}</span>
-                  </div>
+                  <h3 className={`text-lg ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold leading-tight`}>
+                    {t('service6')}
+                  </h3>
                 </div>
               </div>
-            </div>
-
-            {/* Service Category 2: Suppression & Control */}
-            <div className="group">
-              <div className="bg-gradient-to-br from-industrial-dark to-safety-gray p-8 rounded-3xl text-white hover-lift scale-in" style={{animationDelay: '0.2s'}}>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                    <Flame className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-500" />
+              
+              <div className="group">
+                <div className="bg-gradient-to-br from-fire-orange to-fire-red p-6 rounded-2xl text-white hover-lift scale-in shadow-lg hover:shadow-xl transition-all duration-500 h-44" style={{animationDelay: '0.6s'}}>
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm mb-4">
+                    <Flame className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <div className="text-right">
-                    <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">02</span>
-                  </div>
-                </div>
-                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
-                  {language === 'en' ? 'Suppression & Control' : 'القمع والتحكم'}
-                </h3>
-                <p className="text-white/90 font-professional-ar mb-6">
-                  {language === 'en' ? 'State-of-the-art fire suppression systems with automated control and rapid response capabilities.' : 'أنظمة قمع الحريق المتطورة مع التحكم الآلي وقدرات الاستجابة السريعة.'}
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-fire-orange rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Automated Sprinklers' : 'رشاشات آلية'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-fire-orange rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Chemical Suppression' : 'القمع الكيميائي'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-fire-orange rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Instant Response' : 'استجابة فورية'}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Service Category 3: Emergency & Safety */}
-            <div className="group">
-              <div className="bg-gradient-to-br from-fire-orange to-fire-red p-8 rounded-3xl text-white hover-lift scale-in" style={{animationDelay: '0.3s'}}>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                    <Award className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-500" />
-                  </div>
-                  <div className="text-right">
-                    <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">03</span>
-                  </div>
-                </div>
-                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
-                  {language === 'en' ? 'Emergency & Safety' : 'الطوارئ والسلامة'}
-                </h3>
-                <p className="text-white/90 font-professional-ar mb-6">
-                  {language === 'en' ? 'Comprehensive emergency response systems with evacuation planning and safety protocols.' : 'أنظمة الاستجابة للطوارئ الشاملة مع تخطيط الإخلاء وبروتوكولات السلامة.'}
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Evacuation Planning' : 'تخطيط الإخلاء'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Safety Training' : 'تدريب السلامة'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Emergency Protocols' : 'بروتوكولات الطوارئ'}</span>
-                  </div>
+                  <h3 className={`text-lg ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold leading-tight`}>
+                    {t('service7')}
+                  </h3>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Additional Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            {services.slice(0, 4).map((service, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 hover-lift scale-in" style={{animationDelay: `${0.4 + index * 0.1}s`}}>
-                <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
-                  <service.icon className="w-6 h-6 text-white" />
+          
+          {/* Additional Services Row - Theme Colors */}
+          <div className="grid md:grid-cols-4 gap-6">
+            {[7, 8, 9, 10].map((serviceNum, index) => {
+              const colors = [
+                'from-fire-red to-fire-orange',
+                'from-industrial-dark to-safety-gray', 
+                'from-safety-gray to-steel-gray',
+                'from-fire-orange to-fire-red'
+              ];
+              const icons = [Shield, Settings, Flame, Award];
+              const IconComponent = icons[index];
+              
+              return (
+                <div key={serviceNum} className="group">
+                  <div className={`bg-gradient-to-br ${colors[index]} p-6 rounded-2xl text-white hover-lift scale-in shadow-lg hover:shadow-xl transition-all duration-500 h-44`} style={{animationDelay: `${0.6 + index * 0.1}s`}}>
+                    <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-white mb-3 text-sm leading-tight`}>
+                      {t(`service${serviceNum}`)}
+                    </h4>
+                  </div>
                 </div>
-                <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
-                  {t(service.key)}
-                </h4>
-                <p className="text-sm text-safety-gray font-professional-ar">
-                  {language === 'en' ? 'Professional fire safety solutions tailored to your specific needs.' : 'حلول السلامة من الحريق المهنية مصممة لاحتياجاتك المحددة.'}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
-
+          
           {/* Call to Action */}
           <div className="text-center mt-16">
             <Button 
               className="btn-fire text-lg hover:scale-110 transform transition-all duration-500 hover:shadow-2xl" 
               onClick={() => window.open('https://wa.me/966561720820', '_blank')}
             >
-              {language === 'en' ? 'Get Your Free Consultation' : 'احصل على استشارة مجانية'}
+              {language === 'en' ? 'Get a Quote' : 'اطلب عرض سعر'}
               <ArrowIcon className="w-5 h-5 ml-2 animate-pulse" />
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Certificates Section */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className={`text-3xl md:text-4xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-center text-industrial-dark mb-12`}>
-            {t('certificatesTitle')}
-          </h2>
-          
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-white rounded-lg shadow-lg p-8 hover-lift scale-in">
-              <Award className="w-16 h-16 text-fire-red mx-auto mb-6 float" />
-              <div className="space-y-4">
-                <p className="text-lg text-safety-gray hover:text-fire-red transition-colors duration-300">{t('activity')}</p>
-                <p className="text-lg text-safety-gray hover:text-fire-red transition-colors duration-300">{t('crNumber')}</p>
-                <p className="text-lg text-safety-gray hover:text-fire-red transition-colors duration-300">{t('validated')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Fire Safety at Home Section */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-fire-orange/5 via-fire-red/10 to-safety-gray/5">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-fire-orange/15 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-fire-red/15 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-safety-gray/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className={`text-5xl md:text-6xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-industrial-dark mb-6`}>
-              {t('promoTitle')}
-            </h2>
-            <p className="text-xl font-professional-ar text-safety-gray max-w-4xl mx-auto">
-              {language === 'en' ? 'Protect your family with professional fire safety solutions designed for every room in your home. From smart detection to emergency preparedness, we ensure your peace of mind.' : 'احمي عائلتك بحلول السلامة من الحريق المهنية المصممة لكل غرفة في منزلك. من الكشف الذكي إلى الاستعداد للطوارئ، نضمن راحة بالك.'}
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Kitchen Safety */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-fire-red to-fire-orange rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.1s'}}>
-                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
-                  {language === 'en' ? 'Kitchen Fire Safety' : 'السلامة من حريق المطبخ'}
-                </h3>
-                <p className="text-white/90 font-professional-ar mb-6">
-                  {language === 'en' ? 'Advanced smoke detection and automatic suppression systems specifically designed for kitchen environments where most home fires start.' : 'أنظمة كشف الدخان المتقدمة والقمع التلقائي المصممة خصيصاً لبيئات المطبخ حيث تبدأ معظم حرائق المنازل.'}
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Smart Smoke Alarms' : 'أجهزة إنذار الدخان الذكية'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Automatic Suppression' : 'القمع التلقائي'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Heat Monitoring' : 'مراقبة الحرارة'}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Outdoor Safety */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-industrial-dark to-safety-gray rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.2s'}}>
-                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
-                  {language === 'en' ? 'Outdoor Fire Protection' : 'حماية الحريق الخارجية'}
-                </h3>
-                <p className="text-white/90 font-professional-ar mb-6">
-                  {language === 'en' ? 'Comprehensive outdoor fire safety solutions including grill safety, garage protection, and emergency response systems for your property perimeter.' : 'حلول شاملة للسلامة من الحريق الخارجية تشمل سلامة الشواية وحماية الجراج وأنظمة الاستجابة للطوارئ لمحيط ممتلكاتك.'}
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-fire-orange rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Grill Safety Systems' : 'أنظمة سلامة الشواية'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-fire-orange rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Garage Protection' : 'حماية الجراج'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-fire-orange rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Perimeter Monitoring' : 'مراقبة المحيط'}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Garage Safety */}
-            <div className="group relative">
-              <div className="bg-gradient-to-br from-fire-orange to-fire-red rounded-3xl p-8 text-white hover-lift scale-in" style={{animationDelay: '0.3s'}}>
-                <h3 className={`text-2xl ${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold mb-4`}>
-                  {language === 'en' ? 'Garage Fire Safety' : 'السلامة من حريق الجراج'}
-                </h3>
-                <p className="text-white/90 font-professional-ar mb-6">
-                  {language === 'en' ? 'Specialized fire detection and suppression systems for garage environments, protecting vehicles and stored items from fire hazards.' : 'أنظمة متخصصة للكشف عن الحريق وقمعه لبيئات الجراج، تحمي المركبات والعناصر المخزنة من مخاطر الحريق.'}
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Vehicle Protection' : 'حماية المركبات'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Chemical Detection' : 'كشف المواد الكيميائية'}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                    <span className="text-sm">{language === 'en' ? 'Storage Safety' : 'سلامة التخزين'}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Safety Tips Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 hover-lift scale-in" style={{animationDelay: '0.4s'}}>
-              <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
-                {language === 'en' ? 'Install Smoke Alarms' : 'تركيب أجهزة إنذار الدخان'}
-              </h4>
-              <p className="text-sm text-safety-gray font-professional-ar">
-                {language === 'en' ? 'Place smoke alarms in every bedroom and on every level of your home.' : 'ضع أجهزة إنذار الدخان في كل غرفة نوم وعلى كل مستوى من منزلك.'}
-              </p>
-            </div>
-
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 hover-lift scale-in" style={{animationDelay: '0.5s'}}>
-              <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4">
-                <Flame className="w-6 h-6 text-white" />
-              </div>
-              <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
-                {language === 'en' ? 'Keep Fire Extinguishers' : 'احتفظ بطوافئ الحريق'}
-              </h4>
-              <p className="text-sm text-safety-gray font-professional-ar">
-                {language === 'en' ? 'Have fire extinguishers in kitchen, garage, and near fireplaces.' : 'احتفظ بطوافئ الحريق في المطبخ والجراج وبالقرب من المواقد.'}
-              </p>
-            </div>
-
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 hover-lift scale-in" style={{animationDelay: '0.6s'}}>
-              <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
-                {language === 'en' ? 'Create Escape Plan' : 'إنشاء خطة الهروب'}
-              </h4>
-              <p className="text-sm text-safety-gray font-professional-ar">
-                {language === 'en' ? 'Develop and practice a fire escape plan with your family.' : 'طور ومارس خطة الهروب من الحريق مع عائلتك.'}
-              </p>
-            </div>
-
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 hover-lift scale-in" style={{animationDelay: '0.7s'}}>
-              <div className="w-12 h-12 bg-gradient-to-r from-fire-red to-fire-orange rounded-xl flex items-center justify-center mb-4">
-                <Award className="w-6 h-6 text-white" />
-              </div>
-              <h4 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-semibold text-industrial-dark mb-2`}>
-                {language === 'en' ? 'Regular Maintenance' : 'الصيانة الدورية'}
-              </h4>
-              <p className="text-sm text-safety-gray font-professional-ar">
-                {language === 'en' ? 'Schedule regular inspections and maintenance of all fire safety equipment.' : 'جدولة الفحوصات والصيانة الدورية لجميع معدات السلامة من الحريق.'}
-              </p>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <Button 
-              className="btn-fire text-lg hover:scale-110 transform transition-all duration-500 hover:shadow-2xl" 
-              onClick={() => window.open('https://wa.me/966561720820', '_blank')}
-            >
-              {language === 'en' ? 'Protect Your Home Today' : 'احمي منزلك اليوم'}
-              <ArrowIcon className="w-5 h-5 ml-2 animate-pulse" />
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Projects Showcase Section */}
       <section id="gallery" className="py-20 bg-gradient-to-br from-industrial-dark via-safety-gray to-steel-gray">
@@ -637,7 +465,7 @@ export default function ArrowFireLanding() {
               className="btn-fire text-lg hover:scale-110 transform transition-all duration-500 hover:shadow-2xl" 
               onClick={() => window.open('https://wa.me/966561720820', '_blank')}
             >
-              {language === 'en' ? 'View More Projects' : 'عرض المزيد من المشاريع'}
+              {language === 'en' ? 'Get a Quote' : 'اطلب عرض سعر'}
               <ArrowIcon className="w-5 h-5 ml-2 animate-pulse" />
             </Button>
           </div>
@@ -652,12 +480,18 @@ export default function ArrowFireLanding() {
           </h2>
           
           <div className="grid md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((partner) => (
-              <div key={partner} className="bg-white rounded-lg shadow-lg p-8 text-center">
-                <div className="w-16 h-16 bg-steel-gray rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-safety-gray" />
-                </div>
-                <p className="text-safety-gray">Partner {partner}</p>
+            {[
+              '/lovable-uploads/logo1.jpg',
+              '/lovable-uploads/logo2.jpg',
+              '/lovable-uploads/logo3.jpg',
+              '/lovable-uploads/logo4.jpg'
+            ].map((logo, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300">
+                <img 
+                  src={logo} 
+                  alt={`Partner Logo ${index + 1}`}
+                  className="w-24 h-24 mx-auto mb-4 object-contain"
+                />
               </div>
             ))}
           </div>
@@ -704,7 +538,7 @@ export default function ArrowFireLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black text-white py-8">
+      <footer className="bg-industrial-dark text-white py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-4 mb-4 md:mb-0">
@@ -714,21 +548,19 @@ export default function ArrowFireLanding() {
                 className="w-16 h-16 object-contain"
               />
               <div>
-                <h3 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-lg`}>Arrow Fire Trading</h3>
-                <p className="font-professional-ar text-sm text-gray-400">سهم الإطفاء التجارية</p>
+                <h3 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-lg`}>Arrow Fire</h3>
+                <p className="font-professional-ar text-sm text-gray-400">سهم الإطفاء</p>
               </div>
             </div>
             
             <nav className="flex gap-6 mb-4 md:mb-0">
               <a href="#home" className="hover:text-fire-orange transition-colors">{t('home')}</a>
               <a href="#about" className="hover:text-fire-orange transition-colors">{t('about')}</a>
-              <a href="#services" className="hover:text-fire-orange transition-colors">{t('services')}</a>
-              <a href="#gallery" className="hover:text-fire-orange transition-colors">{t('gallery')}</a>
               <a href="#contact" className="hover:text-fire-orange transition-colors">{t('contact')}</a>
             </nav>
             
             <p className="text-sm text-gray-400 text-center">
-              {t('copyright')}
+              © Arrow Fire. All rights reserved.
             </p>
           </div>
         </div>

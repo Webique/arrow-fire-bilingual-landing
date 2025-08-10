@@ -28,27 +28,28 @@ const translations = {
     
     // Services
     servicesTitle: 'Our Services',
-    service1: 'Fire Fighting System Installation',
-    service2: 'Fire Alarm Annual Maintenance',
-    service3: 'Evacuation & Life Safety Plan Design',
-    service4: 'Chemical Storage Safety Reports',
-    service5: 'Annual Maintenance Contracts',
-    service6: 'PPE Equipment Supply',
-    service7: 'Traffic Management Planning',
-    service8: 'Fire Extinguisher Supply & Servicing',
-    service9: 'Support for Legal Safety Compliance',
+    service1: 'Supply and installation of fire fighting system',
+    service2: 'Fire alarm system annual maintenance',
+    service3: 'Prepare and design fire system drawings',
+    service4: 'Prepare and design evacuation plan and life safety',
+    service5: 'Plan, design and technical report for chemical storing',
+    service6: 'Annual maintenance contract services',
+    service7: 'Supply of safety personal protective equipment',
+    service8: 'Traffic management plan from design and installation',
+    service9: 'Supply and maintain all types of fire extinguishers',
+    service10: 'Customer support for issuance of all legal requirements',
     
     // Certificates
-    certificatesTitle: 'Certified & Licensed',
-    activity: 'Activity: Installation and maintenance of firefighting equipment and devices',
-    crNumber: 'CR Number: 2050160884',
-    validated: 'Validated via: https://hcis.gov.sa',
+    certificatesTitle: '',
+    activity: '',
+    crNumber: '',
+    validated: '',
     
     // Promotional
-    promoTitle: 'Fire Safety Starts at Home',
-    kitchen: 'Place in Your Kitchen',
-    grill: 'Next to the Grill',
-    garage: 'Keep in Your Garage',
+    promoTitle: '',
+    kitchen: '',
+    grill: '',
+    garage: '',
     
     // Gallery
     galleryTitle: 'On-site Safety in Action',
@@ -64,7 +65,7 @@ const translations = {
     whatsapp: 'WhatsApp',
     
     // Footer
-    copyright: '© 2025 Arrow Fire Trading. All rights reserved.',
+    copyright: '© Arrow Fire. All rights reserved.',
   },
   ar: {
     // Navigation
@@ -77,7 +78,7 @@ const translations = {
     // Hero Section
     heroTitle: 'السلامة تحتاج إلى شركاء موثوق بهم',
     heroSubtext: 'الإطفاء والإنذار - المراقبة - التكييف',
-    getQuote: 'اطلب عرض سعر',
+    getQuote: 'احصل على استشارة مجانية',
     
     // About Section
     aboutTitle: 'حول سهم الإطفاء التجارية',
@@ -85,27 +86,28 @@ const translations = {
     
     // Services
     servicesTitle: 'خدماتنا',
-    service1: 'تركيب أنظمة مكافحة الحريق',
-    service2: 'الصيانة السنوية لأنظمة الإنذار',
-    service3: 'تصميم خطط الإخلاء والسلامة',
-    service4: 'تقارير سلامة تخزين المواد الكيميائية',
-    service5: 'عقود الصيانة السنوية',
-    service6: 'توريد معدات الحماية الشخصية',
-    service7: 'تخطيط إدارة المرور',
-    service8: 'توريد وصيانة طفايات الحريق',
-    service9: 'الدعم في الامتثال القانوني للسلامة',
+    service1: 'توريد وتركيب أنظمة مكافحة الحريق',
+    service2: 'الصيانة السنوية لنظام إنذار الحريق',
+    service3: 'إعداد وتصميم مخططات أنظمة الحريق',
+    service4: 'إعداد وتصميم خطة الإخلاء والسلامة',
+    service5: 'إعداد وتصميم وتقرير فني لتخزين المواد الكيميائية',
+    service6: 'عقود خدمات الصيانة السنوية',
+    service7: 'توريد معدات الحماية الشخصية',
+    service8: 'خطة إدارة المرور من التصميم إلى التركيب',
+    service9: 'توريد وصيانة جميع أنواع طفايات الحريق',
+    service10: 'دعم العملاء لاستخراج جميع المتطلبات القانونية',
     
     // Certificates
-    certificatesTitle: 'الشهادات والرخص الرسمية',
-    activity: 'النشاط: تركيب وصيانة أجهزة ومعدات الإطفاء',
-    crNumber: 'رقم السجل التجاري: 2050160884',
-    validated: 'مُصدق عبر: https://hcis.gov.sa',
+    certificatesTitle: '',
+    activity: '',
+    crNumber: '',
+    validated: '',
     
     // Promotional
-    promoTitle: 'السلامة تبدأ من المنزل',
-    kitchen: 'ضعها في مطبخك',
-    grill: 'بجانب الشواية',
-    garage: 'احتفظ بها في الجراج',
+    promoTitle: '',
+    kitchen: '',
+    grill: '',
+    garage: '',
     
     // Gallery
     galleryTitle: 'السلامة في العمل الميداني',
@@ -121,7 +123,7 @@ const translations = {
     whatsapp: 'واتساب',
     
     // Footer
-    copyright: '© 2025 سهم الإطفاء التجارية. جميع الحقوق محفوظة.',
+    copyright: '© سهم الإطفاء. جميع الحقوق محفوظة.',
   }
 };
 
