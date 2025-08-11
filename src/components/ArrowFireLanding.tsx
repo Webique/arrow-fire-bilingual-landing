@@ -201,16 +201,16 @@ export default function ArrowFireLanding() {
                     <div className="space-y-2 pb-8">
                       {serviceNum === 1 && (
                         <>
-                          <p className="text-sm text-white/80">• تركيب أنظمة كشف الحريق</p>
-                          <p className="text-sm text-white/80">• أنظمة إطفاء تلقائية</p>
-                          <p className="text-sm text-white/80">• أنظمة إنذار صوتي</p>
+                          <p className="text-sm text-white/80">• {language === 'en' ? 'Installation of fire detection systems' : 'تركيب أنظمة كشف الحريق'}</p>
+                          <p className="text-sm text-white/80">• {language === 'en' ? 'Automatic fire suppression systems' : 'أنظمة إطفاء تلقائية'}</p>
+                          <p className="text-sm text-white/80">• {language === 'en' ? 'Audio alarm systems' : 'أنظمة إنذار صوتي'}</p>
                         </>
                       )}
                       {serviceNum === 2 && (
                         <>
-                          <p className="text-sm text-white/80">• فحص دوري للأجهزة</p>
-                          <p className="text-sm text-white/80">• اختبار الأنظمة</p>
-                          <p className="text-sm text-white/80">• تحديث البرامج</p>
+                          <p className="text-sm text-white/80">• {language === 'en' ? 'Regular equipment inspection' : 'فحص دوري للأجهزة'}</p>
+                          <p className="text-sm text-white/80">• {language === 'en' ? 'System testing' : 'اختبار الأنظمة'}</p>
+                          <p className="text-sm text-white/80">• {language === 'en' ? 'Software updates' : 'تحديث البرامج'}</p>
                         </>
                       )}
                     </div>
@@ -233,20 +233,20 @@ export default function ArrowFireLanding() {
                     <div className="space-y-1 pb-3">
                       {serviceNum === 3 && (
                         <>
-                          <p className="text-xs text-white/80">• تصميم المخططات</p>
-                          <p className="text-xs text-white/80">• الموافقات الهندسية</p>
+                          <p className="text-xs text-white/80">• {language === 'en' ? 'Design drawings' : 'تصميم المخططات'}</p>
+                          <p className="text-xs text-white/80">• {language === 'en' ? 'Engineering approvals' : 'الموافقات الهندسية'}</p>
                         </>
                       )}
                       {serviceNum === 4 && (
                         <>
-                          <p className="text-xs text-white/80">• خطط الإخلاء</p>
-                          <p className="text-xs text-white/80">• بروتوكولات السلامة</p>
+                          <p className="text-xs text-white/80">• {language === 'en' ? 'Evacuation plans' : 'خطط الإخلاء'}</p>
+                          <p className="text-xs text-white/80">• {language === 'en' ? 'Safety protocols' : 'بروتوكولات السلامة'}</p>
                         </>
                       )}
                       {serviceNum === 5 && (
                         <>
-                          <p className="text-xs text-white/80">• تقارير فنية</p>
-                          <p className="text-xs text-white/80">• متطلبات التخزين</p>
+                          <p className="text-xs text-white/80">• {language === 'en' ? 'Technical reports' : 'تقارير فنية'}</p>
+                          <p className="text-xs text-white/80">• {language === 'en' ? 'Storage requirements' : 'متطلبات التخزين'}</p>
                         </>
                       )}
                     </div>
@@ -522,8 +522,7 @@ export default function ArrowFireLanding() {
             <div className="text-center hover-lift scale-in" style={{animationDelay: '0.3s'}}>
               <MapPin className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
               <h3 className="font-semibold mb-2">{t('location')}</h3>
-              <p>Dammam, Saudi Arabia</p>
-              <p>الدمام، المملكة العربية السعودية</p>
+              <p>{language === 'en' ? 'Dammam, Saudi Arabia' : 'الدمام، المملكة العربية السعودية'}</p>
             </div>
             
             <div className="text-center hover-lift scale-in" style={{animationDelay: '0.4s'}}>
@@ -549,7 +548,9 @@ export default function ArrowFireLanding() {
               />
               <div>
                 <h3 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-lg`}>Arrow Fire</h3>
-                <p className="font-professional-ar text-sm text-gray-400">سهم الإطفاء</p>
+                <p className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} text-sm text-gray-400`}>
+                  {language === 'en' ? 'Fire Safety Solutions' : 'سهم الإطفاء'}
+                </p>
               </div>
             </div>
             
