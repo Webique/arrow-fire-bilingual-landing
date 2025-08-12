@@ -23,6 +23,19 @@ export default function ArrowFireLanding() {
   const { language, setLanguage, t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+      // Close mobile menu if open
+      setMobileMenuOpen(false);
+    }
+  };
+
   const services = [
     { icon: Flame, key: 'service1' },
     { icon: Settings, key: 'service2' },
@@ -62,17 +75,22 @@ export default function ArrowFireLanding() {
             {/* Logo */}
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/logo.png" 
+                src="/lovable-uploads/logo6.png" 
                 alt="Arrow Fire Trading Logo"
                 className="w-20 h-20 object-contain"
               />
+              <div className="ml-4">
+                <h1 className="text-xl font-bold text-white">Arrow Fire</h1>
+                <p className="text-sm text-white/80 font-professional-ar">سهم الاطفاء</p>
+              </div>
             </div>
 
             {/* Desktop Navigation - Centered */}
             <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
-              <a href="#home" className="text-white hover:text-fire-orange transition-colors font-medium">{t('home')}</a>
-              <a href="#about" className="text-white hover:text-fire-orange transition-colors font-medium">{t('about')}</a>
-              <a href="#contact" className="text-white hover:text-fire-orange transition-colors font-medium">{t('contact')}</a>
+              <button onClick={() => scrollToSection('home')} className="text-white hover:text-fire-orange transition-colors font-medium cursor-pointer">{t('home')}</button>
+              <button onClick={() => scrollToSection('about')} className="text-white hover:text-fire-orange transition-colors font-medium cursor-pointer">{t('about')}</button>
+              <button onClick={() => scrollToSection('services')} className="text-white hover:text-fire-orange transition-colors font-medium cursor-pointer">{t('services')}</button>
+              <button onClick={() => scrollToSection('contact')} className="text-white hover:text-fire-orange transition-colors font-medium cursor-pointer">{t('contact')}</button>
             </nav>
 
             {/* Language Toggle & Mobile Menu */}
@@ -97,9 +115,10 @@ export default function ArrowFireLanding() {
           {mobileMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 border-t border-white/20 pt-4">
               <div className="flex flex-col gap-4">
-                <a href="#home" className="text-white hover:text-fire-orange transition-colors font-medium">{t('home')}</a>
-                <a href="#about" className="text-white hover:text-fire-orange transition-colors font-medium">{t('about')}</a>
-                <a href="#contact" className="text-white hover:text-fire-orange transition-colors font-medium">{t('contact')}</a>
+                <button onClick={() => scrollToSection('home')} className="text-white hover:text-fire-orange transition-colors font-medium cursor-pointer text-left">{t('home')}</button>
+                <button onClick={() => scrollToSection('about')} className="text-white hover:text-fire-orange transition-colors font-medium cursor-pointer text-left">{t('about')}</button>
+                <button onClick={() => scrollToSection('services')} className="text-white hover:text-fire-orange transition-colors font-medium cursor-pointer text-left">{t('services')}</button>
+                <button onClick={() => scrollToSection('contact')} className="text-white hover:text-fire-orange transition-colors font-medium cursor-pointer text-left">{t('contact')}</button>
               </div>
             </nav>
           )}
@@ -528,8 +547,8 @@ export default function ArrowFireLanding() {
             <div className="text-center hover-lift scale-in" style={{animationDelay: '0.4s'}}>
               <MessageCircle className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
               <h3 className="font-semibold mb-2">{t('whatsapp')}</h3>
-              <a href="https://wa.me/966561720820" className="hover:text-fire-orange transition-colors">
-                +966561720820
+              <a href="https://wa.me/966570707761" className="hover:text-fire-orange transition-colors">
+                0570707761
               </a>
             </div>
           </div>
@@ -542,23 +561,13 @@ export default function ArrowFireLanding() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-4 mb-4 md:mb-0">
               <img 
-                src="/lovable-uploads/logo.png" 
+                src="/lovable-uploads/logo6.png" 
                 alt="Arrow Fire Trading Logo"
                 className="w-16 h-16 object-contain"
               />
-              <div>
-                <h3 className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} font-bold text-lg`}>Arrow Fire</h3>
-                <p className={`${language === 'ar' ? 'font-professional-ar' : 'font-professional-en'} text-sm text-gray-400`}>
-                  {language === 'en' ? 'Fire Safety Solutions' : 'سهم الإطفاء'}
-                </p>
-              </div>
             </div>
             
-            <nav className="flex gap-6 mb-4 md:mb-0">
-              <a href="#home" className="hover:text-fire-orange transition-colors">{t('home')}</a>
-              <a href="#about" className="hover:text-fire-orange transition-colors">{t('about')}</a>
-              <a href="#contact" className="hover:text-fire-orange transition-colors">{t('contact')}</a>
-            </nav>
+
             
             <p className="text-sm text-gray-400 text-center">
               © Arrow Fire. All rights reserved.
