@@ -142,7 +142,7 @@ export default function ArrowFireLanding() {
             <Button 
               className="btn-fire text-lg hover:scale-110 transform transition-all duration-500 hover:shadow-2xl" 
               style={{animationDelay: '0.4s'}}
-              onClick={() => window.open('https://wa.me/966561720820', '_blank')}
+              onClick={() => window.open('https://wa.me/966570707761', '_blank')}
             >
               {t('getQuote')}
               <ArrowIcon className="w-5 h-5 ml-2 animate-pulse" />
@@ -331,7 +331,7 @@ export default function ArrowFireLanding() {
           <div className="text-center mt-16">
             <Button 
               className="btn-fire text-lg hover:scale-110 transform transition-all duration-500 hover:shadow-2xl" 
-              onClick={() => window.open('https://wa.me/966561720820', '_blank')}
+              onClick={() => window.open('https://wa.me/966570707761', '_blank')}
             >
               {language === 'en' ? 'Get a Quote' : 'اطلب عرض سعر'}
               <ArrowIcon className="w-5 h-5 ml-2 animate-pulse" />
@@ -482,7 +482,7 @@ export default function ArrowFireLanding() {
           <div className="text-center mt-16">
             <Button 
               className="btn-fire text-lg hover:scale-110 transform transition-all duration-500 hover:shadow-2xl" 
-              onClick={() => window.open('https://wa.me/966561720820', '_blank')}
+              onClick={() => window.open('https://wa.me/966570707761', '_blank')}
             >
               {language === 'en' ? 'Get a Quote' : 'اطلب عرض سعر'}
               <ArrowIcon className="w-5 h-5 ml-2 animate-pulse" />
@@ -528,7 +528,7 @@ export default function ArrowFireLanding() {
             <div className="text-center hover-lift scale-in" style={{animationDelay: '0.1s'}}>
               <Phone className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
               <h3 className="font-semibold mb-2">{t('phone')}</h3>
-              <a href="tel:0570707763" className="block hover:text-fire-orange transition-colors">0570707763</a>
+              <a href="tel:0570707761" className="block hover:text-fire-orange transition-colors">0570707761</a>
               <a href="tel:0570707761" className="block hover:text-fire-orange transition-colors">0570707761</a>
             </div>
             
