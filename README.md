@@ -90,9 +90,9 @@ The project can be deployed to any static hosting service:
 
 For more information about Arrow Fire Trading services, contact us:
 
-- **Phone**: 0570707763, 0570707761
+- **Phone**: 0570707761 (Call & WhatsApp), 0570707763 (Call Only), 0570707437 (Call Only)
 - **Email**: info@arrowf.sa
-- **WhatsApp**: +966561720820
+- **WhatsApp**: 0570707761
 - **Location**: Dammam, Saudi Arabia
 
 ## License

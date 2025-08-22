@@ -529,27 +529,38 @@ export default function ArrowFireLanding() {
               <Phone className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
               <h3 className="font-semibold mb-2">{t('phone')}</h3>
               <a href="tel:0570707761" className="block hover:text-fire-orange transition-colors">0570707761</a>
-              <a href="tel:0570707761" className="block hover:text-fire-orange transition-colors">0570707761</a>
+              <p className="text-sm text-gray-300 mt-1">{language === 'en' ? 'Call & WhatsApp' : 'اتصال وواتساب'}</p>
             </div>
             
             <div className="text-center hover-lift scale-in" style={{animationDelay: '0.2s'}}>
+              <Phone className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
+              <h3 className="font-semibold mb-2">{t('phone')}</h3>
+              <a href="tel:0570707763" className="block hover:text-fire-orange transition-colors">0570707763</a>
+              <p className="text-sm text-gray-300 mt-1">{language === 'en' ? 'Call Only' : 'اتصال فقط'}</p>
+            </div>
+            
+            <div className="text-center hover-lift scale-in" style={{animationDelay: '0.3s'}}>
+              <Phone className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
+              <h3 className="font-semibold mb-2">{t('phone')}</h3>
+              <a href="tel:0570707437" className="block hover:text-fire-orange transition-colors">0570707437</a>
+              <p className="text-sm text-gray-300 mt-1">{language === 'en' ? 'Call Only' : 'اتصال فقط'}</p>
+            </div>
+            
+            <div className="text-center hover-lift scale-in" style={{animationDelay: '0.4s'}}>
               <Mail className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
               <h3 className="font-semibold mb-2">{t('email')}</h3>
               <a href="mailto:info@arrowf.sa" className="hover:text-fire-orange transition-colors">info@arrowf.sa</a>
             </div>
-            
-            <div className="text-center hover-lift scale-in" style={{animationDelay: '0.3s'}}>
-              <MapPin className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
-              <h3 className="font-semibold mb-2">{t('location')}</h3>
-              <p>{language === 'en' ? 'Dammam, Saudi Arabia' : 'الدمام، المملكة العربية السعودية'}</p>
-            </div>
-            
-            <div className="text-center hover-lift scale-in" style={{animationDelay: '0.4s'}}>
-              <MessageCircle className="w-8 h-8 mx-auto mb-4 text-fire-orange float" />
-              <h3 className="font-semibold mb-2">{t('whatsapp')}</h3>
-              <a href="https://wa.me/966570707761" className="hover:text-fire-orange transition-colors">
-                0570707761
-              </a>
+          </div>
+          
+          {/* Location Information */}
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4">
+              <MapPin className="w-6 h-6 text-fire-orange" />
+              <div>
+                <p className="font-semibold text-white">{language === 'en' ? 'Dammam, Saudi Arabia' : 'الدمام، المملكة العربية السعودية'}</p>
+                <p className="text-sm text-gray-300">{language === 'en' ? 'Main Office Location' : 'الموقع الرئيسي'}</p>
+              </div>
             </div>
           </div>
         </div>
